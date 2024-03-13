@@ -14,7 +14,7 @@ const Menu: React.FC = () => {
         onClick={() => {}}
       />
       <Button
-        to="board"
+        to="rules"
         label="GAME RULES"
         backgroundColor="#FFFFFF"
         onClick={() => {}}
