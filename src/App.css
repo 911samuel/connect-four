@@ -1,13 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
+
+:root {
+    --black: #000000;
+    --purple-dark: #5C2DD5;
+    --purple-light: #7945FF;
+    --pink: #FD6687;
+    --yellow: #FFCE67;
+    --white: #FFFFFF;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    background-color: var(--purple-dark);
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+h1 {
+    font-size: 56px;
+    line-height: 71px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 31px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 700;
+}
+
 #root {
     width: 100%;
     height: 100%;
     display: flex;
-    background-color: #5C2DD5;
+    background-color: var(--purple-dark);
     margin: 0;
 }
 
+.link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 70%;
+    align-items: center;
+    background-color: var(--purple-light);
+    border-radius: 50px;
+    margin: auto;
+    padding: 3em;
+    border: 3px solid black;
+    border-bottom: 20px solid black;
+}
+
+.menu img {
+    margin: 100px 0;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding: 10px 30px;
+    background-color: var(--yellow);
+    border-radius: 20px;
+    text-align: left;
+    margin-bottom: 20px;
+    border: 3px solid var(--black);
+    border-top: 10px solid var(--black);
+    text-decoration: none;
+    color: var(--black);
+}
+
+.button img {
+    margin: 0;
+    margin-left: 15px;
+}
+
+.button:hover {
+    border-color: var(--purple-dark);
+}
+
+.header {
+    width: 50%;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-radius: 30px;
+
+}
+
+.button-header {
+    width: 20%;
+    text-align: center;
+    background-color: var(--purple-light);
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--black);
+    padding: 5px 10px;
+}
+
 #board {
-    width: 70%;
+    width: 50%;
     padding: 20px 0;
     margin: auto;
     display: flex;
@@ -15,32 +134,39 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
-    background: #fff;
-    border-radius: 15px;
+    background: var(--white);
+    border-radius: 30px;
 }
 
 .slot {
-    width: 100px;
-    height: 100px;
+    width: 64px;
+    height: 64px;
     box-sizing: border-box;
-    border-radius: 45%;
-    background: lightgray;
+    border-radius: 50%;
+    background: var(--purple-light);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: black;
+    color: var(--black);
     font-size: 100px;
     font-family: sans-serif;
+    border: 3px solid var(--black);
+    border-top: 10px solid var(--black);
 }
 
-h1 {
-    text-align: center;
-    font-family: sans-serif;
-    font-size: 40px;
-}
 
-.slot img {
-    transition: 1s;
+.pause {
+    display: none;
+    flex-direction: column;
+    width: 40%;
+    height: 70%;
+    align-items: center;
+    background-color: var(--purple-light);
+    border-radius: 50px;
+    margin: auto;
+    padding: 3em;
+    border: 3px solid black;
+    border-bottom: 20px solid black;
 }
 
 #playerDisplay {

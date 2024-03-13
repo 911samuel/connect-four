@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Slot from "./Sloat";
+import group12 from "../assets/Group12.svg";
+import { Link } from "react-router-dom";
 
 interface BoardProps {}
 
@@ -136,11 +138,16 @@ const Board: React.FC<BoardProps> = () => {
   return (
     <>
       <div className="container">
-        {gameOver && (
-          <h1>Game Over! {oppPlayer === "X" ? "Red" : "Black"} Wins!</h1>
-        )}
-        <h2 id="playerDisplay">{currPlayer === "X" ? "Red" : "Black"} Move</h2>
-        <div id="board" onClick={gameOver ? undefined : handleClick}>
+        <div className="header">
+          <Link to={"/"} className="button-header">
+            <h4>MENU</h4>
+          </Link>
+          <img src={group12} alt="logo" />
+          <Link to={"/"} className="button-header">
+            <h4>RESTART</h4>
+          </Link>
+        </div>
+        <div id="board">
           {board.map((row, i) => {
             return row.map((ch, j) => (
               <Slot key={`${i}-${j}`} ch={ch} y={i} x={j} />
