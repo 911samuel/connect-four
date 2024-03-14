@@ -1,12 +1,13 @@
 import React from "react";
-import Button from "./Button";
-import player from "../assets/player-vs-player.svg";
-import group12 from "../assets/Group12.svg";
+import Button from "../button/Button";
+import player from "../../assets/player-vs-player.svg";
+import group12 from "../../assets/Group12.svg";
+import './Menu.css'
 
 const Menu: React.FC = () => {
   return (
     <div className="menu">
-      <img src={group12} alt="logo" />
+      <img  className="group12" src={group12} alt="logo" />
       <Button
         to="board"
         label="PLAY VS PLAYER"

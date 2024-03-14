@@ -1,0 +1,31 @@
+.pause {
+    display: none;
+    flex-direction: column;
+    width: 40%;
+    height: 70%;
+    align-items: center;
+    background-color: var(--purple-light);
+    border-radius: 50px;
+    margin: auto;
+    padding: 3em;
+    border: 3px solid black;
+    border-bottom: 20px solid black;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 70%;
+    align-items: center;
+    background-color: var(--purple-light);
+    border-radius: 50px;
+    margin: auto;
+    padding: 3em;
+    border: 3px solid black;
+    border-bottom: 20px solid black;
+}
+
+.menu .group12 {
+    margin: 100px 0;
+}

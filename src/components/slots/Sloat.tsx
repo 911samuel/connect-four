@@ -1,6 +1,7 @@
 import React from "react";
-import red from "../assets/counter-red-large.svg";
-import yellow from "../assets/counter-yellow-large.svg";
+import red from "../../assets/counter-red-large.svg";
+import yellow from "../../assets/counter-yellow-large.svg";
+import './Slot.css'
 
 interface SlotProps {
   ch: string | null;

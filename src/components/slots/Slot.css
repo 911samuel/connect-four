@@ -1,0 +1,15 @@
+.slot {
+    width: 64px;
+    height: 64px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: var(--purple-light);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+    font-size: 100px;
+    font-family: sans-serif;
+    border: 3px solid var(--black);
+    border-top: 10px solid var(--black);
+}

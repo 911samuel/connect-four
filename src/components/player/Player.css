@@ -1,0 +1,11 @@
+.players-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.player-info {
+    background-color: var(--white);
+    margin-bottom: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
