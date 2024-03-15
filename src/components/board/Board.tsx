@@ -26,7 +26,7 @@ const Board: React.FC<BoardProps> = () => {
           <h4>MENU</h4>
         </Link>
         <img src={group12} alt="logo" />
-        <Link to={"/"} className="button-header">
+        <Link to={"/pause"} className="button-header">
           <h4>RESTART</h4>
         </Link>
       </div>

@@ -1,6 +1,7 @@
 .rule-container {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     width: 30%;
     height: 70%;
     background-color: var(--white);
@@ -9,6 +10,7 @@
     padding: 3em;
     border: 3px solid black;
     border-bottom: 20px solid black;
+    position: relative;
 }
 
 .rule-container .rule-text {
@@ -18,4 +20,14 @@
 .rule-container .rule-text1 {
     color: var(--purple-light);
     margin-top: 30px;
+}
+
+.iconCheck {
+    width: 64px;
+    height: 64px;
+    margin-top: auto;
+    position: absolute;
+    bottom: -32px;
+    left: 50%;
+    transform: translateX(-50%);
 }

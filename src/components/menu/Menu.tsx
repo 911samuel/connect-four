@@ -20,29 +20,6 @@ const Menu: React.FC = () => {
         backgroundColor="#FFFFFF"
         onClick={() => {}}
       />
-
-      <div className="pause">
-        <h1>PAUSE</h1>
-        <Button
-          to="board"
-          backgroundColor="#FFFFFF"
-          label="CONTINUE GAME"
-          image={player}
-          onClick={() => {}}
-        />
-        <Button
-          to="rules"
-          label="RESTART"
-          backgroundColor="#FFFFFF"
-          onClick={() => {}}
-        />
-        <Button
-          to="rules"
-          label="QUIT GAME"
-          backgroundColor="#FD6687"
-          onClick={() => {}}
-        />
-      </div>
     </div>
   );
 };
