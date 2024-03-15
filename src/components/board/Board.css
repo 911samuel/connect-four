@@ -1,23 +1,12 @@
-.board {
-    display: flex;
-    width:  100%;
-}
-
-#board {
-    width: 50%;
-    padding: 20px 0;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    background: #fff;
-    border-radius: 30px;
+div {
+    width: 100%;
+    margin: 0;
+    background-color: var(--purple-light);
+    position: relative;
 }
 
 .header {
-    width: 50%;
+    width: 35%;
     margin: 50px auto;
     display: flex;
     flex-wrap: wrap;
@@ -25,46 +14,109 @@
     justify-content: space-between;
     gap: 20px;
     border-radius: 30px;
-
 }
 
 .button-header {
     width: 20%;
     text-align: center;
-    background-color: var(--purple-light);
+    background-color: var(--purple-dark);
     border-radius: 20px;
     text-decoration: none;
     color: var(--black);
     padding: 5px 10px;
 }
 
-.turn {
+.board {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#board {
+    width: 35%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    background: #fff;
+    border-radius: 30px;
+    border: 3px solid black;
+    border-bottom: 20px solid black;
+    margin-bottom: -50px;
+    position: relative;
+    z-index: 2;
+}
+
+.player-info {
+    max-width: 150px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: var(--white);
+    border-radius: 15px;
+    border: 3px solid black;
+    border-bottom: 20px solid black;
+    text-align: center;
+}
+
+.player-image {
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    background-color: transparent;
+}
+
+.player-info h3 {
+    margin-top: 40px;
+}
+
+.footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     width: 100%;
-    background-color: var(--purple-light);
+    background-color: var(--purple-dark);
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    margin: 0;
-    z-index: 0;
+    z-index: 1;
+    padding-bottom: 248px;
+}
+
+.turn {
+    position: relative;
+    align-items: center;
+    margin: auto;
+    z-index: 3;
 }
 
 .image {
-    width: 20%;
-    z-index: 1;
+    width: 15%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
-
 
 .text-overlay {
     position: absolute;
-    margin: 0;
-    margin-top: 20px;
-    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: var(--white);
-    z-index: 1;
+    background-color: transparent;
     text-align: center;
+    margin-top: 130px;
+}
+
+.text-overlay h4 {
+    margin-bottom: 10px;
+}
+
+.text-overlay h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
 }
