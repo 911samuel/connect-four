@@ -1,4 +1,3 @@
-
 #root {
     background-color: var(--purple-dark);
 }
@@ -7,7 +6,6 @@
     display: flex;
     flex-direction: column;
     width: 40%;
-    height: 70%;
     align-items: center;
     background-color: var(--purple-light);
     border-radius: 50px;
@@ -19,4 +17,30 @@
 
 .menu .group12 {
     margin: 100px 0;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .menu {
+        width: 80%;
+        padding: 2em;
+        margin: auto;
+    }
+
+    .menu .group12 {
+        margin: 50px 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .menu {
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        padding: 2em 0;
+        margin: auto 0;
+    }
+
+    .menu .group12 {
+        margin: 30px 0;
+    }
 }
