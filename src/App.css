@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
 :root {
     --black: #000000;
@@ -9,46 +9,40 @@
     --white: #FFFFFF;
 }
 
-body,
-html {
-    height: 100%;
-    margin: 0;
-    background-color: var(--purple-dark);
-    font-family: 'Space Grotesk', sans-serif;
-}
-
-h1 {
-    font-size: 56px;
-    line-height: 71px;
-    font-weight: 900;
-}
-
-h2 {
-    font-size: 24px;
-    line-height: 31px;
-    font-weight: 900;
-}
-
-h3 {
-    font-size: 20px;
-    line-height: 26px;
-    font-weight: 900;
-}
-
-h4 {
-    font-size: 16px;
-    line-height: 21px;
-    font-weight: 900;
-}
-
 #root {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    box-sizing: border-box;
 }
 
-.link {
-    color: #007bff;
-    text-decoration: none;
+.heading-l {
+    font-size: 56px;
+    line-height: 71px;
+    font-weight: bold;
+}
+
+.heading-m {
+    font-size: 24px;
+    line-height: 31px;
+    font-weight: bold;
+}
+
+.heading-s {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+.heading-xs {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: bold;
+}
+
+.body-text {
+    font-size: 16px;
+    line-height: 21px;
 }

@@ -25,7 +25,7 @@ const Button: React.FC<ButtonProps> = ({
       onClick={onClick}
       type="button"
     >
-      <h2>{label}</h2>
+      <h2 className="heading-m">{label}</h2>
       {image && <img src={image} alt="icon" />}
     </Link>
   );

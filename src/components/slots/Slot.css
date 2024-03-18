@@ -1,6 +1,6 @@
 .slot {
-    width: 64px;
-    height: 64px;
+    flex-basis: calc(14.28% - 20px);
+    aspect-ratio: 1/1;
     box-sizing: border-box;
     border-radius: 50%;
     background: var(--purple-light);
@@ -8,8 +8,24 @@
     align-items: center;
     justify-content: center;
     color: var(--black);
-    font-size: 100px;
-    font-family: sans-serif;
     border: 3px solid var(--black);
     border-top: 10px solid var(--black);
+}
+
+.marker {
+    position: relative;
+}
+
+.marker img {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media only screen and (max-width: 767px) {
+    .slot {
+        flex-basis: calc(14.28% - 10px);
+        aspect-ratio: 1/1;
+    }
 }

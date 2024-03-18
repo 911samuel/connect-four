@@ -1,6 +1,7 @@
 div {
     width: 100%;
     margin: 0;
+    height: fit-content;
     background-color: var(--purple-light);
     position: relative;
 }
@@ -17,54 +18,47 @@ div {
 }
 
 .button-header {
-    width: 20%;
-    text-align: center;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
     background-color: var(--purple-dark);
     border-radius: 20px;
     text-decoration: none;
     color: var(--black);
-    padding: 5px 10px;
+    padding: 10px 20px;
 }
 
 .button-header h4 {
     color: var(--white);
 }
 
-.board {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+.button-header:hover {
+    background-color: var(--pink);
 }
 
-#board {
-    width: 35%;
-    margin: 0 auto;
+.players-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding-top: 10px;
-    padding-bottom: 50px;
-    background: #fff;
-    border-radius: 30px;
-    border: 3px solid black;
-    border-bottom: 20px solid black;
-    margin-bottom: -50px;
-    position: relative;
-    z-index: 2;
+    margin: 20px auto;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .player-info {
-    max-width: 150px;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
+    flex-basis: 10%;
     background-color: var(--white);
     border-radius: 15px;
     border: 3px solid black;
     border-bottom: 20px solid black;
     text-align: center;
+    margin: auto;
+}
+
+.player-info-right {
+    order: 0;
+}
+
+.player-info-left {
+    order: 2;
 }
 
 .player-image {
@@ -78,17 +72,52 @@ div {
     margin-top: 40px;
 }
 
+.playerInfo {
+    display: none;
+}
+
+.board {
+    flex-basis: 35%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.marker {
+    width: 40px;
+    height: 30px;
+    left: 78%;
+    transform: translateX(-50%);
+}
+
+#board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    background: #fff;
+    border-radius: 30px;
+    border: 3px solid black;
+    border-bottom: 20px solid black;
+    margin-bottom: -50px;
+    position: relative;
+    z-index: 2;
+    order: 1;
+}
+
 .footer {
+    position: absolute;
+    width: 100%;
+    height: 230px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    width: 100%;
     background-color: var(--purple-dark);
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
     z-index: 1;
-    padding-bottom: 248px;
+    margin-top: -30px;
 }
 
 .turn {
@@ -99,20 +128,22 @@ div {
 }
 
 .image {
-    width: 15%;
+    width: 12%;
     position: absolute;
+    top: -30px;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .text-overlay {
     position: absolute;
+    top: -20px;
     left: 50%;
     transform: translate(-50%, -50%);
     color: var(--white);
     background-color: transparent;
     text-align: center;
-    margin-top: 130px;
+    margin-top: 90px;
 }
 
 .text-overlay h4 {
@@ -120,41 +151,148 @@ div {
 }
 
 .text-overlay h1 {
-    font-size: 24px;
-    font-weight: bold;
     margin: 0;
 }
 
-@media only screen and (max-width: 1024px) {
-    .header {
-        width: 80%;
+@media (max-width: 1024px) {
+
+    .players-container {
+        width: 85%;
+        flex-direction: column;
         justify-content: space-between;
     }
 
-    .button-header {
-        width: 30%;
+    .header {
+        width: 85%;
     }
 
-    .board {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #board {
-        width: 80%;
-    }
-
+    .marker,
     .player-info {
-        width: 30%;
+        display: none;
+    }
+
+    .playerInfo {
         display: flex;
-        margin-bottom: 0;
+        margin: 0;
+        margin-bottom: 30px;
+        justify-content: space-between;
+    }
+
+    .rightInfo {
+        flex-basis: 42%;
+        background-color: var(--white);
+        border-radius: 15px;
+        border: 3px solid black;
+        border-bottom: 20px solid black;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 20px;
+    }
+
+    .player-image {
+        top: 10px;
+        transform: translateX(-50%);
+    }
+
+    .rightInfo h3 {
+        margin-left: 50px;
+    }
+
+    .rightInfo h1 {
+        margin-right: 50px;
+    }
+
+    .rightInfo .righImage {
+        transform: translateX(50%);
+    }
+
+    .right h1 {
+        margin-right: 0;
+        margin-left: 50px;
+    }
+
+    .right h3 {
+        margin-left: 0;
+        margin-right: 50px;
     }
 
     .image {
-        width: 20%;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .players-container {
+        width: 95%;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
-    .text-overlay {
-        margin-top: 100px;
+    .header {
+        width: 95%;
+    }
+
+    .marker {
+        display: none;
+    }
+
+    #board {
+        gap: 10px;
+        margin-bottom: -30px;
+        padding-bottom: 30px;
+    }
+
+    .player-info {
+        display: none;
+    }
+
+    .playerInfo {
+        display: flex;
+        margin: 0;
+        margin-bottom: 20px;
+        justify-content: space-between;
+    }
+
+    .rightInfo {
+        flex-basis: 42%;
+        background-color: var(--white);
+        border-radius: 15px;
+        border: 3px solid black;
+        border-bottom: 20px solid black;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 20px;
+    }
+
+    .player-image {
+        top: 20px;
+        transform: translateX(-50%);
+    }
+
+    .rightInfo .righImage {
+        transform: translateX(50%);
+    }
+
+    .rightInfo h1,
+    .rightInfo h3 {
+        margin: auto;
+    }
+
+    .rightInfo h1 {
+        order: 1;
+    }
+
+    .rightInfo h3 {
+        order: 0;
+    }
+
+    .image {
+        width: auto;
+        top: -20px;
     }
 }

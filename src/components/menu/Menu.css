@@ -5,7 +5,7 @@
 .menu {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 29%;
     align-items: center;
     background-color: var(--purple-light);
     border-radius: 50px;
@@ -16,7 +16,7 @@
 }
 
 .menu .group12 {
-    margin: 100px 0;
+    margin: 80px 0;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
