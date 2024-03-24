@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import group12 from "../assets/Group12.svg";
 import { Link } from "react-router-dom";
 import Pause from "./Pause";
+import "../styles/Header.css"
 
 const Header: React.FC = () => {
   const [showPause, setShowPause] = useState(false);

@@ -6,35 +6,6 @@ div {
     position: relative;
 }
 
-.header {
-    width: 35%;
-    margin: 50px auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    border-radius: 30px;
-}
-
-.button-header {
-    width: fit-content;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--purple-dark);
-    border-radius: 20px;
-    text-decoration: none;
-    color: var(--black);
-    padding: 10px 20px;
-}
-
-.button-header h4 {
-    color: var(--white);
-}
-
-.button-header:hover {
-    background-color: var(--pink);
-}
 
 .players-container {
     display: flex;
@@ -113,46 +84,13 @@ div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--purple-dark);
-    border-top-left-radius: 35px;
-    border-top-right-radius: 35px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
     z-index: 1;
     margin-top: -30px;
 }
 
-.turn {
-    position: relative;
-    align-items: center;
-    margin: auto;
-    z-index: 3;
-}
 
-.image {
-    width: 12%;
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.text-overlay {
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--white);
-    background-color: transparent;
-    text-align: center;
-    margin-top: 90px;
-}
-
-.text-overlay h4 {
-    margin-bottom: 10px;
-}
-
-.text-overlay h1 {
-    margin: 0;
-}
 
 @media (max-width: 1024px) {
 
@@ -160,10 +98,6 @@ div {
         width: 85%;
         flex-direction: column;
         justify-content: space-between;
-    }
-
-    .header {
-        width: 85%;
     }
 
     .marker,
@@ -216,11 +150,7 @@ div {
     .right h3 {
         margin-left: 0;
         margin-right: 50px;
-    }
-
-    .image {
-        width: auto;
-    }
+    }  
 }
 
 @media only screen and (max-width: 767px) {
@@ -228,10 +158,6 @@ div {
         width: 95%;
         flex-direction: column;
         justify-content: space-between;
-    }
-
-    .header {
-        width: 95%;
     }
 
     .marker {
@@ -289,10 +215,5 @@ div {
 
     .rightInfo h3 {
         order: 0;
-    }
-
-    .image {
-        width: auto;
-        top: -20px;
     }
 }

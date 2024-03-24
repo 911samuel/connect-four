@@ -105,11 +105,11 @@ export const BoardProvider: React.FC<{ children: ReactNode }> = ({
       ["", "", "", "", "", "", ""],
     ]);
 
-    setCurrentPlayer("X");
     setWinner(null);
     setTurnTime(30);
-    setMarker(markerRed);
+    setMarker(currentPlayer === "X" ? markerYellow : markerRed );
     setMarkerPosition(null);
+    setCurrentPlayer((prevPlayer) => (prevPlayer === "X" ? "O" : "X"));
   };
 
   const contextValue: BoardContextValue = {

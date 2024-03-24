@@ -8,27 +8,33 @@ import player2 from "../assets/player-two.svg";
 import { useBoardContext } from "../context/BoardContext";
 
 const Game: React.FC = () => {
-  const { scorePlayer1, scorePlayer2 } = useBoardContext();
+  const { scorePlayer1, scorePlayer2, winner } = useBoardContext();
   
 
   return (
     <div>
-      <Header/>
+      <Header />
       <div className="players-container">
         <PlayerInfo
           image={player1}
           playerName={"Player 1"}
           score={scorePlayer1}
         />
-        <Board/>
+        <Board />
         <PlayerInfo
           image={player2}
           playerName={"Player 2"}
           score={scorePlayer2}
         />
       </div>
-      < TurnInfo />
-      <footer className="footer"></footer>
+      <TurnInfo />
+      <footer
+        className="footer"
+        style={{
+          backgroundColor:
+            winner === "X" || winner === "O" ? "var(--pink)" : "var(--purple-dark)",
+        }}
+      ></footer>
     </div>
   );
 };

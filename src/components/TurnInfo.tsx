@@ -1,6 +1,7 @@
 import React from "react";
 import { useBoardContext } from "../context/BoardContext";
 import winnerImage from "../assets/Rectangle.png";
+import "../styles/TurnInfo.css"
 
 const TurnInfo: React.FC = () => {
     
@@ -9,11 +10,12 @@ const TurnInfo: React.FC = () => {
 
   let turnText = "";
   let backgroundImage = background;
-  let timeDisplay = turnTime;
+  let timeDisplay = `${turnTime}s`;
+  let textColor = winner ? "black" : "white"; 
 
   if (winner) {
     backgroundImage = winnerImage;
-    turnText = `PLAYER ${winner === "X" ? "1" : "2"} WINS`;
+    turnText = `PLAYER ${winner === "X" ? "1" : "2"}`;
     timeDisplay = "WINS"; 
   } else {
     turnText = `PLAYER ${currentPlayer === "X" ? "1" : "2"}'S TURN`;
@@ -22,10 +24,10 @@ const TurnInfo: React.FC = () => {
   return (
     <div className="turn">
       <img src={backgroundImage} alt="Turn Background" className="image" />
-      <div className="text-overlay">
+      <div className="text-overlay" style={{ color: textColor }}>
         <h4 className="heading-xs">{turnText}</h4>
-        <h1 className="heading-l">{`${timeDisplay}s`}</h1>
-        {winner && <button onClick={handlePlayAgain}>PLAY AGAIN</button>}
+        <h1 className="heading-l">{`${timeDisplay}`}</h1>
+        {winner && <button className="try" onClick={handlePlayAgain}>PLAY AGAIN</button>}
       </div>
     </div>
   );
