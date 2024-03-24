@@ -1,6 +1,6 @@
 import React from "react";
-import './Rules.css'
-import iconCheck from "../../assets/icon-check.svg"
+import '../styles/Rules.css'
+import iconCheck from "../assets/icon-check.svg"
 import { Link } from "react-router-dom";
 
 const Rule: React.FC = () => {

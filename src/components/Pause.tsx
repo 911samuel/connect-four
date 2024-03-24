@@ -1,8 +1,16 @@
 import React from "react";
-import Button from "../button/Button";
-import "./Pause.css";
+import Button from "./Button";
+import "../styles/Pause.css";
 
-const Pause: React.FC = () => {
+interface PauseProps {
+  isVisible: boolean;
+}
+
+const Pause: React.FC<PauseProps> = ({ isVisible }) => {
+  if (!isVisible) {
+    return null; 
+  }
+
   return (
     <div className="pause">
       <h1>PAUSE</h1>

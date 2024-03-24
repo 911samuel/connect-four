@@ -1,7 +1,7 @@
 import React from "react";
-import red from "../../assets/counter-red-large.svg";
-import yellow from "../../assets/counter-yellow-large.svg";
-import "./Slot.css";
+import red from "../assets/counter-red-large.svg";
+import yellow from "../assets/counter-yellow-large.svg";
+import "../styles/Slot.css";
 
 interface SlotProps {
   ch: string | null;
@@ -10,7 +10,6 @@ interface SlotProps {
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
   onClick: (col: number) => void;
-  onClickSlot: (y: number, x: number) => void;
 }
 
 const imageStyle: React.CSSProperties = {
@@ -25,7 +24,6 @@ const Slot: React.FC<SlotProps> = ({
   onMouseEnter,
   onMouseLeave,
   onClick,
-  onClickSlot,
 }) => {
   return (
     <div
@@ -36,7 +34,6 @@ const Slot: React.FC<SlotProps> = ({
       onMouseLeave={onMouseLeave}
       onClick={() => {
         onClick(y);
-        onClickSlot(y, x);
       }}
     >
       {ch && (

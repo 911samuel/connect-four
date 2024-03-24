@@ -1,19 +1,20 @@
 import "./App.css";
-import Board from "./components/board/Board";
-import Menu from "./components/menu/Menu";
+import Menu from "./components/Menu";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Rules from "./components/rules/Rules";
-import Pause from "./components/pause/Pause";
+import Rules from "./components/Rules";
+import Game from "./components/Game";
+import { BoardProvider } from "./context/BoardContext";
 
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Menu />}></Route>
-        <Route path="/board/*" element={<Board />}></Route>
-        <Route path="/rules/*" element={<Rules />}></Route>
-        <Route path="/pause/*" element={< Pause />}></Route>
-      </Routes>
+      <BoardProvider>
+        <Routes>
+          <Route path="/" element={<Menu />} />
+          <Route path="/game/*" element={<Game />} />
+          <Route path="/rules/*" element={<Rules />} />
+        </Routes>
+      </BoardProvider>
     </Router>
   );
 }
