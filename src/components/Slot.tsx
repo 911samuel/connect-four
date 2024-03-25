@@ -14,7 +14,7 @@ interface SlotProps {
 
 const imageStyle: React.CSSProperties = {
   width: "100%", 
-  height: "auto",
+  height: "100%", 
 };
 
 const Slot: React.FC<SlotProps> = ({

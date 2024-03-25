@@ -1,6 +1,7 @@
 div {
     width: 100%;
     margin: 0;
+    padding: 0;
     height: fit-content;
     background-color: var(--purple-light);
     position: relative;
