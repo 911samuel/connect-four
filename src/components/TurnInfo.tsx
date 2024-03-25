@@ -27,7 +27,18 @@ const TurnInfo: React.FC = () => {
       <div className="text-overlay" style={{ color: textColor }}>
         <h4 className="heading-xs">{turnText}</h4>
         <h1 className="heading-l">{`${timeDisplay}`}</h1>
-        {winner && <button className="try" onClick={handlePlayAgain}>PLAY AGAIN</button>}
+        {winner && (
+          <button
+            className="try"
+            onClick={handlePlayAgain}
+            style={{
+              backgroundColor:
+                winner === "X" ? "var(--pink)" : "var(--purple-dark)",
+            }}
+          >
+            PLAY AGAIN
+          </button>
+        )}
       </div>
     </div>
   );

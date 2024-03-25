@@ -1,16 +1,28 @@
 import React from "react";
 import Button from "./Button";
 import "../styles/Pause.css";
+import { useBoardContext } from "../context/BoardContext";
 
 interface PauseProps {
   isVisible: boolean;
+  onResume: () => void;
+  onRestart: () => void;
 }
-
-const Pause: React.FC<PauseProps> = ({ isVisible }) => {
+const Pause: React.FC<PauseProps> = ({
+  isVisible,
+  onResume,
+}) => {
   if (!isVisible) {
-    return null; 
+    return null;
   }
-
+  const { handlePlayAgain } =
+    useBoardContext();
+  
+  const handleRestartAndClose = () => {
+    handlePlayAgain(); 
+    onResume(); 
+  };
+  
   return (
     <div className="pause-overlay">
       <div className="pause">
@@ -19,20 +31,15 @@ const Pause: React.FC<PauseProps> = ({ isVisible }) => {
           to="board"
           backgroundColor="#FFFFFF"
           label="CONTINUE GAME"
-          onClick={() => {}}
+          onClick={onResume}
         />
         <Button
-          to="rules"
+          to="board"
           label="RESTART"
           backgroundColor="#FFFFFF"
-          onClick={() => {}}
+          onClick={handleRestartAndClose}
         />
-        <Button
-          to="rules"
-          label="QUIT GAME"
-          backgroundColor="#FD6687"
-          onClick={() => {}}
-        />
+        <Button to="/" label="QUIT GAME" backgroundColor="#FD6687" />
       </div>
     </div>
   );

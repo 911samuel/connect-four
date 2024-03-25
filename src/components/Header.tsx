@@ -11,6 +11,10 @@ const Header: React.FC = () => {
     setShowPause(true);
   };
 
+  const handleResume = () => {
+    setShowPause(false);  
+  };
+
   return (
     <div className="header">
       <Link to={"/"} className="button-header">
@@ -20,7 +24,11 @@ const Header: React.FC = () => {
       <button className="button-header" onClick={handleRestart}>
         <h4 className="heading-xs">RESTART</h4>
       </button>
-      <Pause isVisible={showPause} />
+      <Pause
+        isVisible={showPause}
+        onResume={handleResume}
+        onRestart={handleRestart}
+      /> 
     </div>
   );
 };
