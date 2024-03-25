@@ -113,34 +113,40 @@ const Board: React.FC<BoardProps> = () => {
   };
 
   return (
-    <div className="board">
-      {markerPosition && typeof markerPosition.y !== "undefined" && (
-        <img
-          className="marker"
-          src={marker}
-          alt=""
-          style={{
-            top: markerPosition.y * 100 + "%",
-            left: `calc(${markerPosition.x * (100 / board[0].length)}% + 50px)`,
-          }}
-        />
-      )}
-      <div id="board">
-        {board.map((row, i) =>
-          row.map((ch, j) => (
-            <Slot
-              key={`${i}-${j}`}
-              ch={ch}
-              y={i}
-              x={j}
-              onMouseEnter={() => handleMouseEnter(j)}
-              onMouseLeave={handleMouseLeave}
-              onClick={() => handleMove(j)}
-            />
-          ))
+    <>
+      <div className="board">
+        {markerPosition && typeof markerPosition.y !== "undefined" && (
+          <img
+            className="marker"
+            src={marker}
+            alt=""
+            style={{
+              position: "absolute",
+              top: "-35px",
+              left: `calc(${
+                markerPosition.x * (100 / board[0].length)
+              }% + 25px)`,
+              zIndex: 999,
+            }}
+          />
         )}
+        <div id="board">
+          {board.map((row, i) =>
+            row.map((ch, j) => (
+              <Slot
+                key={`${i}-${j}`}
+                ch={ch}
+                y={i}
+                x={j}
+                onMouseEnter={() => handleMouseEnter(j)}
+                onMouseLeave={handleMouseLeave}
+                onClick={() => handleMove(j)}
+              />
+            ))
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
