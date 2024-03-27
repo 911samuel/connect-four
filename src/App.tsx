@@ -2,8 +2,9 @@ import "./App.css";
 import Menu from "./components/Menu";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Rules from "./components/Rules";
-import Game from "./components/Game";
 import { BoardProvider } from "./context/BoardContext";
+import PlayerVsCpu from "./components/PlayerVsCpu";
+import PlayerVsPlayer from "./components/PlayerVsPlayer";
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <BoardProvider>
         <Routes>
           <Route path="/" element={<Menu />} />
-          <Route path="/game/*" element={<Game />} />
+          <Route path="/cpu/*" element={<PlayerVsCpu />} />
+          <Route path="/game/*" element={<PlayerVsPlayer />} />
           <Route path="/rules/*" element={<Rules />} />
         </Routes>
       </BoardProvider>

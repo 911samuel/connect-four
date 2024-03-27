@@ -1,6 +1,4 @@
 import React from "react";
-import red from "../assets/counter-red-large.svg";
-import yellow from "../assets/counter-yellow-large.svg";
 import "../styles/Slot.css";
 
 interface SlotProps {
@@ -12,11 +10,6 @@ interface SlotProps {
   onClick: (col: number) => void;
 }
 
-const imageStyle: React.CSSProperties = {
-  width: "100%", 
-  height: "100%", 
-};
-
 const Slot: React.FC<SlotProps> = ({
   ch,
   y,
@@ -25,6 +18,17 @@ const Slot: React.FC<SlotProps> = ({
   onMouseLeave,
   onClick,
 }) => {
+  const slotStyle: React.CSSProperties = {
+    backgroundColor:
+      ch === "X"
+        ? "var(--pink)"
+        : ch === "O"
+        ? "var(--yellow)"
+        : "var(--purple-light)",
+    width: "100%",
+    height: "100%",
+  };
+
   return (
     <div
       className="slot"
@@ -35,14 +39,8 @@ const Slot: React.FC<SlotProps> = ({
       onClick={() => {
         onClick(y);
       }}
+      style={slotStyle}
     >
-      {ch && (
-        <img
-          src={ch === "X" ? red : yellow}
-          alt={ch === "X" ? "Red" : "Yellow Counter"}
-          style={imageStyle}
-        />
-      )}
     </div>
   );
 };

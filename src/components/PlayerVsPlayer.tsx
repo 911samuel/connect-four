@@ -8,7 +8,7 @@ import player2 from "../assets/player-two.svg";
 import { useBoardContext } from "../context/BoardContext";
 import PlayerDevice from "./PlayerDevice";
 
-const Game: React.FC = () => {
+const PlayerVsPlayer: React.FC = () => {
   const { scorePlayer1, scorePlayer2, winner } = useBoardContext();
   
 
@@ -21,9 +21,7 @@ const Game: React.FC = () => {
           playerName={"Player 1"}
           score={scorePlayer1}
         />
-        <PlayerDevice
-          score={scorePlayer2}
-        />
+        < PlayerDevice />
         <Board />
         <PlayerInfo
           image={player2}
@@ -45,4 +43,4 @@ const Game: React.FC = () => {
   );
 };
 
-export default Game;
+export default PlayerVsPlayer;

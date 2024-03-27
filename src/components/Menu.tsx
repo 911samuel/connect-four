@@ -9,6 +9,12 @@ const Menu: React.FC = () => {
     <div className="menu">
       <img className="group12" src={group12} alt="logo" />
       <Button
+        to="cpu"
+        label="YOU VS CPU"
+        image={player}
+        onClick={() => {}}
+      />
+      <Button
         to="game"
         label="PLAY VS PLAYER"
         image={player}

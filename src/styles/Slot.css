@@ -3,7 +3,6 @@
     aspect-ratio: 1/1;
     box-sizing: border-box;
     border-radius: 50%;
-    background: var(--purple-light);
     display: inline-flex;
     align-items: center;
     justify-content: center;
