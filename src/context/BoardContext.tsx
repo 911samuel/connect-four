@@ -35,6 +35,7 @@ interface BoardContextValue {
   handlePlayAgain: () => void;
   cpuPlay: () => void;
   handleMove: (col: number) => void;
+  handleResetAndRedirect: () => void;
 }
 
 const BoardContext = createContext<BoardContextValue | null>(null);
@@ -210,6 +211,15 @@ export const BoardProvider: React.FC<{ children: ReactNode }> = ({
     );
   };
 
+  const handleResetAndRedirect = () => {
+    handlePlayAgain();
+    setMarker(markerRed);
+    setCurrentPlayer("X");
+    setBackground(turnBackgroundRed);
+    setScorePlayer1(0);
+    setScorePlayer2(0);
+  };
+
   const contextValue: BoardContextValue = {
     board,
     setBoard,
@@ -233,6 +243,7 @@ export const BoardProvider: React.FC<{ children: ReactNode }> = ({
     handlePlayAgain,
     cpuPlay,
     handleMove,
+    handleResetAndRedirect,
   };
 
   return (

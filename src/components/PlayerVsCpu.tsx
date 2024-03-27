@@ -44,18 +44,10 @@ const PlayerVsPlayer: React.FC = () => {
     <div>
       <Header />
       <div className="players-container">
-        <PlayerInfo
-          image={player1}
-          playerName={"you"}
-          score={scorePlayer1}
-        />
-        <PlayerDevice />
+        <PlayerInfo image={player1} playerName={"you"} score={scorePlayer1} />
+        <PlayerDevice gameMode="playerVsCpu" />
         <Board />
-        <PlayerInfo
-          image={player2}
-          playerName={"cpu"}
-          score={scorePlayer2}
-        />
+        <PlayerInfo image={player2} playerName={"cpu"} score={scorePlayer2} />
       </div>
       <TurnInfo />
       <footer

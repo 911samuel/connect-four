@@ -21,7 +21,7 @@ const PlayerVsPlayer: React.FC = () => {
           playerName={"Player 1"}
           score={scorePlayer1}
         />
-        < PlayerDevice />
+        <PlayerDevice gameMode="playerVsPlayer" />
         <Board />
         <PlayerInfo
           image={player2}
