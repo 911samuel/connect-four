@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "./Button";
 import player from "../assets/player-vs-player.svg";
+import cpu from "../assets/player-vs-cpu.svg"
 import group12 from "../assets/Group12.svg";
 import "../styles/Menu.css";
 
@@ -11,7 +12,8 @@ const Menu: React.FC = () => {
       <Button
         to="cpu"
         label="YOU VS CPU"
-        image={player}
+        backgroundColor="var(--pink)"
+        image={cpu}
         onClick={() => {}}
       />
       <Button
