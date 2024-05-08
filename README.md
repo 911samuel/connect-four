@@ -1,30 +1,83 @@
-# React + TypeScript + Vite
+# Connect Four Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the Connect Four game! This project allows you to play the classic Connect Four game against another human player on the same computer.
 
-Currently, two official plugins are available:
+![Connect Four Screenshot](./screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
 
-## Expanding the ESLint configuration
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [How to Play](#how-to-play)
+- [Game Rules](#game-rules)
+- [Optimal Layout](#optimal-layout)
+- [Interactive Elements](#interactive-elements)
+- [Bonus Features](#bonus-features)
+- [Credits](#credits)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Getting Started
 
-- Configure the top-level `parserOptions` property like this:
+### Prerequisites
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+To run this project, you need to have Node.js installed on your system.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Installation
+
+1. Clone this repository to your local machine:
+
+   ```bash
+   git clone <repository-url>
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd connect-four-game
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open your browser and navigate to `http://localhost:3000` to view the game.
+
+## How to Play
+
+1. When the game starts, you'll see the game board with empty slots.
+2. Players take turns to drop their colored discs into the columns of the board.
+3. The first player to connect four of their colored discs in a row wins the game.
+4. If the board fills up before a player achieves four in a row, the game is a draw.
+
+## Game Rules
+
+Connect Four is played on a vertical grid with 7 columns and 6 rows. Players alternate turns, dropping one of their colored discs into an empty column. The discs fall straight down, occupying the lowest available space within the column.
+
+To win, you must be the first player to connect four of your colored discs in a row, either horizontally, vertically, or diagonally.
+
+## Optimal Layout
+
+The game interface is responsive, adapting to different screen sizes for optimal viewing and interaction. Whether you're playing on a desktop or a mobile device, you'll have a smooth gaming experience.
+
+## Interactive Elements
+
+- **Game Board**: Click on any empty slot in the column to drop your disc.
+- **Reset Button**: Resets the game to its initial state, allowing you to start a new game.
+- **Game Rules Button**: Provides a brief overview of the game rules.
+
+## Bonus Features
+
+- **Disc Animation**: Discs animate into their position when a move is made.
+- **Play Against Computer**: Coming soon!
+
+## Credits
+
+This project was created by [Your Name]. It utilizes React.js and Vite for development. Connect Four game logic is implemented in JavaScript.
