@@ -2,7 +2,7 @@
 
 Welcome to the Connect Four game! This project allows you to play the classic Connect Four game against another human player on the same computer.
 
-![Connect Four Screenshot](./screenshot.png)
+![Connect Four Screenshot](./src/assets/gamePlay.png)
 
 ## Table of Contents
 
@@ -78,6 +78,16 @@ The game interface is responsive, adapting to different screen sizes for optimal
 - **Disc Animation**: Discs animate into their position when a move is made.
 - **Play Against Computer**: Coming soon!
 
+## Connect with me:
+
+Feel free to connect with me on the following platforms to discuss, ask questions, or just say hello:
+
+- [CodePen](https://codepen.io/abayizera-sam-eazi)
+- [Twitter](https://twitter.com/abayizerasam)
+- [LinkedIn](https://linkedin.com/in/abayizera-samuel)
+- [Instagram](https://instagram.com/abayizera7)
+- [HackerRank](https://www.hackerrank.com/abayizeraeaz)
+
 ## Credits
 
-This project was created by [Your Name]. It utilizes React.js and Vite for development. Connect Four game logic is implemented in JavaScript.
+This project was created by ABAYIZERA Samuel. It utilizes React.js and Vite for development. Connect Four game logic is implemented in JavaScript.
